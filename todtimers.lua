@@ -306,7 +306,7 @@ tod_subcommands = {
     ['help'] = {func = tod_help, help = 'Lists ToD subcommands'},
     ['timer'] = {func = start_timer, help = 'Start new ToD Timer; include time for specific start, no time for now'},
     ['stop'] = {func = stop_timer, help = 'Stop ToD Timer(s), include an ID for specific, no ID for all'},
-    ['add'] = {func = add_nm, help = 'Adds new NM to list; /tod add {code} {name} {min_respawn} {PH respawn)} {ID 0x...} {PH(s) 0x...}'},
+    ['add'] = {func = add_nm, help = 'Adds new NM to list; /tod add {code} {name} {min_respawn} {PH respawn} {ID 0x...} {PH(s) 0x...}'},
     ['del'] = {func = del_nm, help = 'Removes NM from list; /tod del {code}'},
     ['ph'] = {func = manual_ph_death, help = 'Adds new PH time of death; /tod ph {code} {time}'},
     ['nm'] = {func = manual_nm_death, help = 'Adds new NM time of death; /tod nm {code} {time}'},
