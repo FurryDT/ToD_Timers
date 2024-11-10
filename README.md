@@ -54,6 +54,12 @@ To delete an NM:
 
  /tod del {code}
 
+## Clearing Times of Death
+
+/tod clear - clears all ToD (and timers)
+
+/tod clear {code} - clears all ToD for the specified NM
+
 ## Manual NM / Placeholder times
 
 If a Time of Death is not directly witnessed it can be added:
