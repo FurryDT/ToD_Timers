@@ -363,10 +363,11 @@ ashita.events.register('d3d_present', 'present_cb', function ()
             if os.time() - y > 86400 then
                 line = line .. math.floor((os.time() - y) / 86400) .. 'd ';
             end
-            line = line .. os.date('!%X', os.time() - y) .. ' ago)';
             if (y + NMs[x].Respawn < os.time()) then
+                line = line .. os.date('!%X', os.time() - y - NMs[x].Respawn) .. ' in window)';
                 imgui.TextColored({0.5, 0.5, 1.0, 1.0}, line .. ' - Open');
             else
+                line = line .. os.date('!%X', NMs[x].Respawn - os.time() + y) .. ' until window)';
                 imgui.TextColored({1.0, 0.5, 0.5, 1.0}, line .. ' - ' .. os.date('%X', NMs[x].Respawn));
             end
         end
