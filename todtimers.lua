@@ -24,8 +24,7 @@ addon.name     = 'ToDTimers';
 addon.desc     = 'Diplays timers for NM repops';
 addon.version  = '2.0';
 
-require ('common');
-require('sugar');
+require('common');
 local NMs = require('NMs');
 local ui = require('ui');
 local utils = require('utils');

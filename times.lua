@@ -1,4 +1,3 @@
-require('sugar');
 local chat = require('chat');
 local utils = require('utils');
 local NMs = require('NMs');
