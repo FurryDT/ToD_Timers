@@ -21,6 +21,7 @@ ui.update = function (times)
     imgui.SetNextWindowSize({ windowSize, -1, }, ImGuiCond_Always);
     if (imgui.Begin('TodTimers', true, bit.bor(ImGuiWindowFlags_NoDecoration))) then
         imgui.TextColored({1.0, 0.5, 1.0, 1.0},'Notorious Monster Tracker');
+        imgui.Text('NM ToDs:');
         for c, t in pairs(times.active_tods) do
             local line = NMs[c].Name .. ' [' .. string.format('%03X', NMs[c].ID) .. ']: ' .. os.date('%X', t) ..' ('
             if (t + NMs[c].Respawn < os.time()) then
