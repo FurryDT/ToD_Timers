@@ -94,7 +94,7 @@ end);
 ashita.events.register('command', 'command_cb', function (e)
     -- Parse the command arguments..
     local args = e.command:args();
-    if (#args == 0 or not args[1]:any('/tod2')) then -- needs updating to just /tod
+    if (#args == 0 or not args[1]:any('/tod')) then
         return;
     end
 
