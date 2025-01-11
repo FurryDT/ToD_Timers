@@ -100,14 +100,12 @@ ashita.events.register('command', 'command_cb', function (e)
     -- Block all related commands..
     e.blocked = true;
 
-    local new_args = {};
-    for i = 3, #args, 1 do
-        table.insert(new_args, args[i]);
-    end
+    table.remove(args, 1);
+    local sub = table.remove(args, 1);
 
     -- process known subcommands
-    if (tod_subcommands[args[2]] ~= nil) then
-        tod_subcommands[args[2]].func(new_args);
+    if (tod_subcommands[sub] ~= nil) then
+        tod_subcommands[sub].func(args);
         return;
     end
 
